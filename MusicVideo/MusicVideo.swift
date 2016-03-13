@@ -22,6 +22,9 @@ class Videos {
     private var _vLinkToiTunes: String
     private var _vReleaseDte: String
     
+    // this variable gets from the UI
+    var vImageData: NSData?
+ 
     //Make a getter
     
     var vName: String {
@@ -113,9 +116,9 @@ class Videos {
             _vVideoUrl = ""
         }
         
-        ///Video id
-        if let content = data["id"] as? JSONDictionary,
-            vAtrib = content["attributes"] as? JSONDictionary ,
+        ///Artist id
+        if let imid = data["id"] as? JSONDictionary,
+            vAtrib = imid["attributes"] as? JSONDictionary ,
             vImid = vAtrib["im:id"] as? String {
                 self._vImid = vImid
         }
@@ -127,7 +130,7 @@ class Videos {
         ///Video genre
         if let genre = data["category"] as? JSONDictionary,
             vAtrib = genre["attributes"] as? JSONDictionary ,
-            vGenre = vAtrib["label"] as? String {
+            vGenre = vAtrib["term"] as? String {
             self._vGenre = vGenre
         }
         else {
