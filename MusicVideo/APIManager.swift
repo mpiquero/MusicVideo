@@ -33,7 +33,7 @@ class APIManager {
                         converts the NSData into a JSON object and cast it to a Dictionary */
                         
                         if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                            as? [String: AnyObject] {
+                            as? JSONDictionary {
                                 
                                 print(json)
                             
