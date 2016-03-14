@@ -4,15 +4,17 @@
 //
 //  Created by MPiquero on 3/6/16.
 //  Copyright © 2016 MPiquero. All rights reserved.
-// Part - 8
+// Part - 10
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var videos = [Videos]()
 
     @IBOutlet weak var displayLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
         
         //call API
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=10/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json", completion: didLoadData)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -34,6 +36,8 @@ class ViewController: UIViewController {
         for (index,item) in videos.enumerate() {
             print("\(index + 1): \(item.vName)")
         }
+        
+        tableView.reloadData()
     }
     
     func reachabilityStatusChanged(){
@@ -52,6 +56,24 @@ class ViewController: UIViewController {
     deinit
     {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videos.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let video = videos[indexPath.row]
+        cell.textLabel?.text = ("\(indexPath.row + 1)")
+        cell.detailTextLabel?.text = video.vName
+        //cell.imageView?.image = video.vImageData
+        
+        return cell
     }
 
 }
