@@ -9,7 +9,7 @@
 import Foundation
 
 class Videos {
-    //Data Encapsulation
+    ///Data Encapsulation
     
     private var _vName: String
     private var _vRights: String
@@ -22,10 +22,10 @@ class Videos {
     private var _vLinkToiTunes: String
     private var _vReleaseDte: String
     
-    // this variable gets from the UI
+    /// this variable gets from the UI
     var vImageData: NSData?
  
-    //Make a getter
+    ///Make a getter
     
     var vName: String {
         return _vName

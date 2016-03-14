@@ -4,7 +4,7 @@
 //
 //  Created by MPiquero on 3/6/16.
 //  Copyright © 2016 MPiquero. All rights reserved.
-// Part - 3
+// Part - 6
 
 import UIKit
 
@@ -20,15 +20,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func didLoadData(result:String){
-        
-        let alert = UIAlertController(title: (result), message: nil, preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
-            // do something
+    func didLoadData(videos: [Videos]) {
+        for (index,item) in videos.enumerate() {
+            print("\(index + 1): \(item.vName)")
         }
-        
-        alert.addAction(okAction)
-        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 
