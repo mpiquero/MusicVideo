@@ -18,6 +18,7 @@
 		B861673F1C8CBE3B00FCFA6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B861673D1C8CBE3B00FCFA6A /* LaunchScreen.storyboard */; };
 		B861674A1C8CBE3B00FCFA6A /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86167491C8CBE3B00FCFA6A /* MusicVideoTests.swift */; };
 		B86167551C8CBE3B00FCFA6A /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86167541C8CBE3B00FCFA6A /* MusicVideoUITests.swift */; };
+		B87D2DD71C9735B600C9F251 /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B86167501C8CBE3B00FCFA6A /* MusicVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86167541C8CBE3B00FCFA6A /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		B86167561C8CBE3B00FCFA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				B86167361C8CBE3B00FCFA6A /* ViewController.swift */,
+				B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				B82A8EDD1C959330002F86F1 /* APIManager.swift in Sources */,
 				B86167371C8CBE3B00FCFA6A /* ViewController.swift in Sources */,
+				B87D2DD71C9735B600C9F251 /* MusicVideoTVC.swift in Sources */,
 				B82A8EE21C95D4DB002F86F1 /* MusicVideo.swift in Sources */,
 				B86167351C8CBE3B00FCFA6A /* AppDelegate.swift in Sources */,
 				B82A8EE71C96431E002F86F1 /* Reachability.m in Sources */,
