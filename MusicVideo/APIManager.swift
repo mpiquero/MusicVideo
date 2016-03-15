@@ -23,7 +23,7 @@ class APIManager {
                     print(error!.localizedDescription)
                 } else {
                     //added for JSONSerialization
-                    //print(data)
+                    
                     do {
                         /* .AllowFragments - top level object is not Array or Dictionary
                         Any type of string or value
@@ -34,13 +34,14 @@ class APIManager {
                             as? JSONDictionary, feed = json["feed"] as? JSONDictionary,
                             entries = feed["entry"] as? JSONArray {
                                 var videos = [Videos]()
-                                for entry in entries {
+                                for (index,entry) in entries.enumerate() {
                                     let entry = Videos(data: entry as! JSONDictionary)
+                                    entry.vRank = index + 1
                                     videos.append(entry)
                                 }
                                 
-                                let i = videos.count
-                                print("iTunesApiManager - total count --> \(i)")
+//                                let i = videos.count
+//                                print("iTunesApiManager - total count --> \(i)")
                             
                                 let priority = DISPATCH_QUEUE_PRIORITY_HIGH
                                 dispatch_async(dispatch_get_global_queue(priority, 0)) {

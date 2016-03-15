@@ -35,7 +35,6 @@ class MusicVideoTVC: UITableViewController {
     func reachabilityStatusChanged(){
         switch reachabilityStatus {
         case NOACCESS :
-            view.backgroundColor = UIColor.redColor()
             //move back to the main queue
             dispatch_async(dispatch_get_main_queue()) {
             let alert = UIAlertController(title: "No Internet Access", message: "Please make sure you are connected to the Internet", preferredStyle: .Alert)
@@ -54,14 +53,14 @@ class MusicVideoTVC: UITableViewController {
             
             self.presentViewController(alert, animated: true, completion: nil)
             }
-        default: view.backgroundColor = UIColor.grayColor()
-        if videos.count == 0 {
-            runApi()
-        } else {
-            print("Do not run the API")
+        default:
+            if videos.count == 0 {
+                runApi()
+            } else {
+                print("Do not run the API")
+                }
             }
         }
-    }
     
     // this is called just as the object is about to be deallocated
     deinit
@@ -81,21 +80,20 @@ class MusicVideoTVC: UITableViewController {
         return videos.count
     }
 
+    private struct storyboard {
+        static let cellReuseableIdentifier = "cell"
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let video = videos[indexPath.row]
-        cell.textLabel?.text = ("\(indexPath.row + 1)")
-        cell.detailTextLabel?.text = video.vName
-        
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(storyboard.cellReuseableIdentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
+        cell.video = videos[indexPath.row]
         return cell
     }
     
     func runApi() {
         //call API
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=50/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=200/json", completion: didLoadData)
     }
     
 

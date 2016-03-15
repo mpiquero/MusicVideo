@@ -19,6 +19,7 @@
 		B861674A1C8CBE3B00FCFA6A /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86167491C8CBE3B00FCFA6A /* MusicVideoTests.swift */; };
 		B86167551C8CBE3B00FCFA6A /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86167541C8CBE3B00FCFA6A /* MusicVideoUITests.swift */; };
 		B87D2DD71C9735B600C9F251 /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */; };
+		B87D2DD91C98693F00C9F251 /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B86167541C8CBE3B00FCFA6A /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		B86167561C8CBE3B00FCFA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
+		B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				B86167361C8CBE3B00FCFA6A /* ViewController.swift */,
 				B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */,
+				B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				B82A8EDD1C959330002F86F1 /* APIManager.swift in Sources */,
 				B86167371C8CBE3B00FCFA6A /* ViewController.swift in Sources */,
 				B87D2DD71C9735B600C9F251 /* MusicVideoTVC.swift in Sources */,
+				B87D2DD91C98693F00C9F251 /* MusicVideoTableViewCell.swift in Sources */,
 				B82A8EE21C95D4DB002F86F1 /* MusicVideo.swift in Sources */,
 				B86167351C8CBE3B00FCFA6A /* AppDelegate.swift in Sources */,
 				B82A8EE71C96431E002F86F1 /* Reachability.m in Sources */,
