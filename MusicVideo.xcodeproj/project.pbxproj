@@ -21,6 +21,7 @@
 		B87D2DD71C9735B600C9F251 /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */; };
 		B87D2DD91C98693F00C9F251 /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */; };
 		B87D2DDB1C99AD6300C9F251 /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */; };
+		B87D2DDF1C99D55B00C9F251 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
 		B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
 		B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
+		B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */,
 				B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */,
 				B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */,
+				B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				B82A8EE21C95D4DB002F86F1 /* MusicVideo.swift in Sources */,
 				B86167351C8CBE3B00FCFA6A /* AppDelegate.swift in Sources */,
 				B82A8EE71C96431E002F86F1 /* Reachability.m in Sources */,
+				B87D2DDF1C99D55B00C9F251 /* SettingsTVC.swift in Sources */,
 				B82A8EE01C95D3BF002F86F1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
