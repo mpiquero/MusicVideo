@@ -21,7 +21,6 @@ class MusicVideoTVC: UITableViewController {
         
         reachabilityStatusChanged()
         preferredFontChanged()
-        
     }
     
     func preferredFontChanged() {
@@ -30,10 +29,10 @@ class MusicVideoTVC: UITableViewController {
     
     func didLoadData(videos: [Videos]) {
         self.videos = videos
-        print(reachabilityStatus)
-        for (index,item) in videos.enumerate() {
-            print("\(index + 1): \(item.vName)")
-        }
+        //print(reachabilityStatus)
+        //for (index,item) in videos.enumerate() {
+         //   print("\(index + 1): \(item.vName)")
+        //}
         
         tableView.reloadData()
     }
@@ -72,7 +71,7 @@ class MusicVideoTVC: UITableViewController {
     deinit
     {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "preferredFontChanged", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     // MARK: - Table view data source
