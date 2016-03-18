@@ -27,12 +27,27 @@ class SettingsTVC: UITableViewController {
         }
     }
     
+    @IBAction func valueChanged(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(Int(sliderCount.value), forKey: "quantityDisplay")
+        quantityDisplay.text = ("\(Int(sliderCount.value))")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
         tableView.alwaysBounceVertical = false
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChanged", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         touchID.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
+        
+        if (NSUserDefaults.standardUserDefaults().objectForKey("quantityDisplay") != nil) {
+            let theValue = NSUserDefaults.standardUserDefaults().objectForKey("quantityDisplay") as! Int
+            quantityDisplay.text = "\(theValue)"
+            sliderCount.value = Float(theValue)
+        }
+        
+        
     }
     
     func preferredFontChanged() {
@@ -47,5 +62,18 @@ class SettingsTVC: UITableViewController {
     {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "about" {
+            if tableView.indexPathForSelectedRow == 0 {
+                print("hello")
+                let dvc = segue.destinationViewController as! AboutVC
+                
+            }
+            
+            
+        }
+    }
+
 
 }

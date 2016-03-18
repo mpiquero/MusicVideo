@@ -22,6 +22,7 @@
 		B87D2DD91C98693F00C9F251 /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */; };
 		B87D2DDB1C99AD6300C9F251 /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */; };
 		B87D2DDF1C99D55B00C9F251 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */; };
+		B87D2DE11C9C522200C9F251 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87D2DE01C9C522200C9F251 /* AboutVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
 		B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
 		B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
+		B87D2DE01C9C522200C9F251 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */,
 				B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */,
 				B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */,
+				B87D2DE01C9C522200C9F251 /* AboutVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				B86167351C8CBE3B00FCFA6A /* AppDelegate.swift in Sources */,
 				B82A8EE71C96431E002F86F1 /* Reachability.m in Sources */,
 				B87D2DDF1C99D55B00C9F251 /* SettingsTVC.swift in Sources */,
+				B87D2DE11C9C522200C9F251 /* AboutVC.swift in Sources */,
 				B82A8EE01C95D3BF002F86F1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
