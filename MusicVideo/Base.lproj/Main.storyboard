@@ -275,10 +275,10 @@
             </objects>
             <point key="canvasLocation" x="1701" y="1058"/>
         </scene>
-        <!--View Controller-->
+        <!--AboutVC-->
         <scene sceneID="9my-D2-gcS">
             <objects>
-                <viewController id="V28-qk-CIb" sceneMemberID="viewController">
+                <viewController id="V28-qk-CIb" customClass="AboutVC" customModule="MusicVideo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cpO-eJ-YEw"/>
                         <viewControllerLayoutGuide type="bottom" id="PA7-Td-Hec"/>
@@ -431,6 +431,9 @@
                     <toolbarItems>
                         <barButtonItem systemItem="play" id="efc-Az-mqw">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="play:" destination="bBo-Oa-KE7" id="NpF-uA-wxj"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="PyP-eL-e7u">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class MusicVideoDetailVC: UIViewController {
     
@@ -17,6 +19,16 @@ class MusicVideoDetailVC: UIViewController {
     @IBOutlet weak var vGenre: UILabel!
     @IBOutlet weak var vPrice: UILabel!
     @IBOutlet weak var vRights: UILabel!
+    
+    @IBAction func play(sender: UIBarButtonItem) {
+        let url = NSURL(string: videos.vVideoUrl)!
+        let player = AVPlayer(URL: url)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.presentViewController(playerViewController, animated: true) {
+            playerViewController.player?.play()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +47,6 @@ class MusicVideoDetailVC: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChanged", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         preferredFontChanged()
-        
-        
     }
     
     func preferredFontChanged() {
@@ -50,4 +60,6 @@ class MusicVideoDetailVC: UIViewController {
     {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
+    
+    
 }
