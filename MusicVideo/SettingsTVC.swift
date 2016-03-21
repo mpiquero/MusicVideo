@@ -31,13 +31,14 @@ class SettingsTVC: UITableViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(Int(sliderCount.value), forKey: "quantityDisplay")
         quantityDisplay.text = ("\(Int(sliderCount.value))")
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
+        
         tableView.alwaysBounceVertical = false
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChanged", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         touchID.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
         
@@ -45,9 +46,10 @@ class SettingsTVC: UITableViewController {
             let theValue = NSUserDefaults.standardUserDefaults().objectForKey("quantityDisplay") as! Int
             quantityDisplay.text = "\(theValue)"
             sliderCount.value = Float(theValue)
+        } else {
+            sliderCount.value = 10.0
+            quantityDisplay.text = ("\(Int(sliderCount.value))")
         }
-        
-        
     }
     
     func preferredFontChanged() {

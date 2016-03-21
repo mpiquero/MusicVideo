@@ -11,10 +11,14 @@ import UIKit
 class MusicVideoTVC: UITableViewController {
 
     var videos = [Videos]()
+    var limit = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.redColor()]
+        title = "The iTunes Top \(limit) Music Videos"
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChanged", name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -97,10 +101,32 @@ class MusicVideoTVC: UITableViewController {
         return cell
     }
     
+    
+    @IBAction func refresh(sender: UIRefreshControl) {
+        refreshControl?.endRefreshing()
+        runApi()
+    }
+    
+    
+    func getAPICount() {
+        if (NSUserDefaults.standardUserDefaults().objectForKey("quantityDisplay") != nil) {
+            let theValue = NSUserDefaults.standardUserDefaults().objectForKey("quantityDisplay") as! Int
+            limit = theValue
+        }
+        title = "The iTunes Top \(limit) Music Videos"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss"
+        let refreshDte = formatter.stringFromDate(NSDate())
+        
+        refreshControl?.attributedTitle = NSAttributedString(string: "\(refreshDte)")
+    }
+    
     func runApi() {
+        getAPICount()
+        
         //call API
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=200/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=\(limit)/json", completion: didLoadData)
     }
     
 
