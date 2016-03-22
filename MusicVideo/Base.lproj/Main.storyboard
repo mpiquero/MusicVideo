@@ -228,11 +228,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Music Videos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu3-9q-4yb">
-                                                    <rect key="frame" x="8" y="11" width="194" height="24"/>
+                                                    <rect key="frame" x="8" y="11" width="351" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="194" id="EZV-QL-63l"/>
+                                                        <constraint firstAttribute="width" constant="351" id="EZV-QL-63l"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -243,7 +243,7 @@
                                                 <constraint firstItem="jdx-RH-YeM" firstAttribute="trailing" secondItem="mAj-ES-bDT" secondAttribute="trailingMargin" id="ZJg-yN-68w"/>
                                                 <constraint firstItem="wu3-9q-4yb" firstAttribute="leading" secondItem="mAj-ES-bDT" secondAttribute="leadingMargin" id="dOC-07-LO8"/>
                                                 <constraint firstItem="jdx-RH-YeM" firstAttribute="top" secondItem="mAj-ES-bDT" secondAttribute="topMargin" id="lak-nE-BcU"/>
-                                                <constraint firstItem="wu3-9q-4yb" firstAttribute="baseline" secondItem="jdx-RH-YeM" secondAttribute="baseline" id="mnF-Zk-xuV"/>
+                                                <constraint firstItem="wu3-9q-4yb" firstAttribute="baseline" secondItem="jdx-RH-YeM" secondAttribute="baseline" constant="1" id="mnF-Zk-xuV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -260,12 +260,12 @@
                                                         <action selector="valueChanged:" destination="tkE-2W-zVr" eventType="valueChanged" id="Ifw-Xb-GLJ"/>
                                                     </connections>
                                                 </slider>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the slider below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-Oe-GCD">
-                                                    <rect key="frame" x="169" y="8" width="263" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the slider below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-Oe-GCD">
+                                                    <rect key="frame" x="169" y="8" width="263" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="263" id="dZS-Pe-Pac"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -289,8 +289,10 @@
                     </tableView>
                     <connections>
                         <outlet property="aboutDisplay" destination="4mK-it-Wq0" id="Ypw-GR-1At"/>
+                        <outlet property="dragTheSliderDisplay" destination="yrr-Oe-GCD" id="U4B-Xu-2Q1"/>
                         <outlet property="feedBackDisplay" destination="YIo-EN-xOm" id="VhZ-Ti-HnL"/>
                         <outlet property="imageQualityDisplay" destination="BXj-YZ-RIQ" id="8rW-Rm-1Ja"/>
+                        <outlet property="numberOfVideoDisplay" destination="wu3-9q-4yb" id="Vxn-bl-zzY"/>
                         <outlet property="quantityDisplay" destination="jdx-RH-YeM" id="QMF-Gt-hjg"/>
                         <outlet property="securityDisplay" destination="FdA-YS-PlJ" id="gY5-r4-X0t"/>
                         <outlet property="sliderCount" destination="t9c-a5-g1y" id="VY7-cB-dev"/>
@@ -467,6 +469,9 @@
                         </barButtonItem>
                         <barButtonItem systemItem="action" id="D0E-Pn-Ufn">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="socialMedia:" destination="bBo-Oa-KE7" id="yvK-Ed-KWM"/>
+                            </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <connections>

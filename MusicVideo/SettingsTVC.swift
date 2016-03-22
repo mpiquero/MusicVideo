@@ -17,6 +17,9 @@ class SettingsTVC: UITableViewController {
     @IBOutlet weak var touchID: UISwitch!
     @IBOutlet weak var quantityDisplay: UILabel!
     @IBOutlet weak var sliderCount: UISlider!
+    @IBOutlet weak var numberOfVideoDisplay: UILabel!
+    @IBOutlet weak var dragTheSliderDisplay: UILabel!
+    
     @IBAction func touchIDSec(sender: UISwitch) {
         let defaults = NSUserDefaults.standardUserDefaults()
         if touchID.on {
@@ -58,6 +61,8 @@ class SettingsTVC: UITableViewController {
         quantityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         imageQualityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         securityDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        numberOfVideoDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        dragTheSliderDisplay.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
     }
     
     deinit
