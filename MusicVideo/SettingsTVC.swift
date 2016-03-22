@@ -76,7 +76,8 @@ class SettingsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             
             if MFMailComposeViewController.canSendMail() {
                 self.presentViewController(mailComposeViewController, animated:  true, completion:  nil)
-            } else
+            }
+            else
             {
                 //no mail account setup on phone
                 mailAlert()

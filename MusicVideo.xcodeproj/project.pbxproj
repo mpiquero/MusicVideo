@@ -135,12 +135,12 @@
 		B86167331C8CBE3B00FCFA6A /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				B86167641C8CEB2F00FCFA6A /* View */,
 				B82A8EE31C96415D002F86F1 /* Obj-c */,
 				B82A8EDE1C95D3A8002F86F1 /* Utils */,
 				B86167651C8CEB4200FCFA6A /* Supporting Files */,
 				B86167621C8CEAFE00FCFA6A /* Model */,
 				B86167631C8CEB0800FCFA6A /* Controller */,
-				B86167641C8CEB2F00FCFA6A /* View */,
 			);
 			path = MusicVideo;
 			sourceTree = "<group>";
@@ -175,10 +175,10 @@
 		B86167631C8CEB0800FCFA6A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */,
 				B86167361C8CBE3B00FCFA6A /* ViewController.swift */,
 				B87D2DD61C9735B600C9F251 /* MusicVideoTVC.swift */,
 				B87D2DD81C98693F00C9F251 /* MusicVideoTableViewCell.swift */,
-				B87D2DDA1C99AD6300C9F251 /* MusicVideoDetailVC.swift */,
 				B87D2DDE1C99D55B00C9F251 /* SettingsTVC.swift */,
 				B87D2DE01C9C522200C9F251 /* AboutVC.swift */,
 			);
