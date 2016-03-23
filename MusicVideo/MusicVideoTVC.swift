@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController {
+class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
 
     var videos = [Videos]()
     
@@ -43,7 +43,8 @@ class MusicVideoTVC: UITableViewController {
         //}
         
         // setup the search controller
-        //resultSearchController.searchResultsUpdater = self
+        resultSearchController.searchResultsUpdater = self
+        
         definesPresentationContext = true
         resultSearchController.dimsBackgroundDuringPresentation = false
         resultSearchController.searchBar.placeholder = "Search for Artist"
@@ -126,7 +127,12 @@ class MusicVideoTVC: UITableViewController {
     
     @IBAction func refresh(sender: UIRefreshControl) {
         refreshControl?.endRefreshing()
+        
+        if resultSearchController.active {
+            refreshControl?.attributedTitle = NSAttributedString(string: "No Refresh allowed in Search")
+        } else {
         runApi()
+        }
     }
     
     
@@ -175,5 +181,15 @@ class MusicVideoTVC: UITableViewController {
         }
     }
 
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        searchController.searchBar.text!.lowercaseString
+        filterSearch(searchController.searchBar.text!)
+    }
 
+    func filterSearch(searchText: String){
+        filterSearch = videos.filter { videos in
+            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        tableView.reloadData()
+    }
 }
